@@ -6,5 +6,18 @@
 </head>
 <body>
 	<h1>Spring MVC Thymeleaf Demo</h1>
+
+	<h2>Count:</h2>
+	<p th:if="${count.isEmpty()}">Count is empty!</p>
+	<ul th:if="${!count.isEmpty()}">
+		<li th:each="number:${count}" th:text="${number}"></li>
+	</ul>
+
+	<h2>Letters:</h2>
+	<p th:if="${letters.isEmpty()}">Letters is empty!</p>
+	<ul th:if="${!letters.isEmpty()}">
+		<li th:each="letter:${letters}" th:text="${letter}"></li>
+	</ul>
+
 </body>
 </html>
